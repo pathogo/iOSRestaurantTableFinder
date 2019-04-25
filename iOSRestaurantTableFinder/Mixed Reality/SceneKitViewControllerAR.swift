@@ -64,8 +64,7 @@ class SceneKitViewControllerAR: MixedRealityViewController, ARSCNViewDelegate, A
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        // FIXIT: Erstelle hier eine ARWorldTrackingConfiguration
         
         // Run the view's session
         sceneView.session.run(configuration)

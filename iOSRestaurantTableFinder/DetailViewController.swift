@@ -16,9 +16,7 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.name
-            }
+
         }
     }
 
@@ -28,7 +26,7 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: Desk? {
+    var detailItem: Date? {
         didSet {
             // Update the view.
             configureView()

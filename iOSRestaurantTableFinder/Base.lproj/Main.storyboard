@@ -44,16 +44,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kX3-jo-wYs">
                                 <rect key="frame" x="159.5" y="519" width="95" height="30"/>
                                 <state key="normal" title="Virtual Reality"/>
-                                <connections>
-                                    <segue destination="k2M-dB-Jdp" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="kIW-tZ-gEf"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvd-Km-dzi">
-                                <rect key="frame" x="143" y="557" width="129" height="30"/>
+                                <rect key="frame" x="142.5" y="557" width="129" height="30"/>
                                 <state key="normal" title="Augmented Reality"/>
-                                <connections>
-                                    <segue destination="3l7-1b-MbC" kind="presentation" id="YNh-N2-e3R"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,84 +72,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708.69565217391312" y="128.57142857142856"/>
-        </scene>
-        <!--Scene Kit View ControllerVR-->
-        <scene sceneID="I2N-uP-pfO">
-            <objects>
-                <viewController id="DxP-VS-nCj" customClass="SceneKitViewControllerVR" customModule="iOSRestaurantTableFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Llx-b5-qIM" customClass="SCNView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="vDK-e9-uFk"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Sf4-gl-XAs">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="w68-5a-hei">
-                            <connections>
-                                <action selector="dismissSceneKitView:" destination="DxP-VS-nCj" id="gza-aY-ALI"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QnH-Mn-Cr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2174" y="129"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cUe-8j-fGn">
-            <objects>
-                <navigationController id="3l7-1b-MbC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aAW-zp-m3L">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="jVK-5s-N2a" kind="relationship" relationship="rootViewController" id="wap-zk-VAr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NEN-aX-uBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1457" y="813"/>
-        </scene>
-        <!--Scene Kit View ControllerAR-->
-        <scene sceneID="47q-Zo-KeV">
-            <objects>
-                <viewController id="jVK-5s-N2a" customClass="SceneKitViewControllerAR" customModule="iOSRestaurantTableFinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8cn-bW-6rm" customClass="ARSCNView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Ebr-63-9on"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="X3o-31-98J">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="fMj-Hm-fcg">
-                            <connections>
-                                <action selector="dismissSceneKitView:" destination="jVK-5s-N2a" id="5Bp-P3-e6I"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0LQ-Y2-N0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2184" y="814"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4B4-NM-HY4">
-            <objects>
-                <navigationController id="k2M-dB-Jdp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zGa-cF-McL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="DxP-VS-nCj" kind="relationship" relationship="rootViewController" id="9WO-Il-Zsr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zg7-yW-PjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1449" y="129"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">

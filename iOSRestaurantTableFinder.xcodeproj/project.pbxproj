@@ -16,10 +16,6 @@
 		993B9844225CFEC5005B61C0 /* iOSRestaurantTableFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993B9843225CFEC5005B61C0 /* iOSRestaurantTableFinderTests.swift */; };
 		993B984F225CFEC5005B61C0 /* iOSRestaurantTableFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993B984E225CFEC5005B61C0 /* iOSRestaurantTableFinderUITests.swift */; };
 		998B4AAA2264A50B00C9A9D0 /* MixedRealityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AA92264A50B00C9A9D0 /* MixedRealityViewController.swift */; };
-		998B4AAE2264B75D00C9A9D0 /* Desk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AAD2264B75D00C9A9D0 /* Desk.swift */; };
-		998B4AB52264BB5200C9A9D0 /* SceneKitViewControllerVR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AB02264BB5200C9A9D0 /* SceneKitViewControllerVR.swift */; };
-		998B4AB62264BB5200C9A9D0 /* assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 998B4AB12264BB5200C9A9D0 /* assets.scnassets */; };
-		998B4AB82264BB5200C9A9D0 /* SceneKitViewControllerAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AB42264BB5200C9A9D0 /* SceneKitViewControllerAR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +51,6 @@
 		993B984E225CFEC5005B61C0 /* iOSRestaurantTableFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSRestaurantTableFinderUITests.swift; sourceTree = "<group>"; };
 		993B9850225CFEC5005B61C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		998B4AA92264A50B00C9A9D0 /* MixedRealityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedRealityViewController.swift; sourceTree = "<group>"; };
-		998B4AAD2264B75D00C9A9D0 /* Desk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Desk.swift; sourceTree = "<group>"; };
-		998B4AB02264BB5200C9A9D0 /* SceneKitViewControllerVR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneKitViewControllerVR.swift; sourceTree = "<group>"; };
-		998B4AB12264BB5200C9A9D0 /* assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = assets.scnassets; sourceTree = "<group>"; };
-		998B4AB42264BB5200C9A9D0 /* SceneKitViewControllerAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneKitViewControllerAR.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +104,7 @@
 				993B982C225CFEB8005B61C0 /* AppDelegate.swift */,
 				993B982E225CFEB8005B61C0 /* MasterViewController.swift */,
 				993B9830225CFEB8005B61C0 /* DetailViewController.swift */,
-				998B4AAD2264B75D00C9A9D0 /* Desk.swift */,
 				998B4AA92264A50B00C9A9D0 /* MixedRealityViewController.swift */,
-				998B4AAF2264BB5200C9A9D0 /* Mixed Reality */,
 				993B9832225CFEB8005B61C0 /* Main.storyboard */,
 				993B9835225CFEC4005B61C0 /* Assets.xcassets */,
 				993B9837225CFEC4005B61C0 /* LaunchScreen.storyboard */,
@@ -139,16 +129,6 @@
 				993B9850225CFEC5005B61C0 /* Info.plist */,
 			);
 			path = iOSRestaurantTableFinderUITests;
-			sourceTree = "<group>";
-		};
-		998B4AAF2264BB5200C9A9D0 /* Mixed Reality */ = {
-			isa = PBXGroup;
-			children = (
-				998B4AB02264BB5200C9A9D0 /* SceneKitViewControllerVR.swift */,
-				998B4AB42264BB5200C9A9D0 /* SceneKitViewControllerAR.swift */,
-				998B4AB12264BB5200C9A9D0 /* assets.scnassets */,
-			);
-			path = "Mixed Reality";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				993B9839225CFEC4005B61C0 /* LaunchScreen.storyboard in Resources */,
-				998B4AB62264BB5200C9A9D0 /* assets.scnassets in Resources */,
 				993B9836225CFEC4005B61C0 /* Assets.xcassets in Resources */,
 				993B9834225CFEB9005B61C0 /* Main.storyboard in Resources */,
 			);
@@ -283,10 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				998B4AB52264BB5200C9A9D0 /* SceneKitViewControllerVR.swift in Sources */,
 				993B9831225CFEB8005B61C0 /* DetailViewController.swift in Sources */,
-				998B4AB82264BB5200C9A9D0 /* SceneKitViewControllerAR.swift in Sources */,
-				998B4AAE2264B75D00C9A9D0 /* Desk.swift in Sources */,
 				993B982F225CFEB8005B61C0 /* MasterViewController.swift in Sources */,
 				998B4AAA2264A50B00C9A9D0 /* MixedRealityViewController.swift in Sources */,
 				993B982D225CFEB8005B61C0 /* AppDelegate.swift in Sources */,

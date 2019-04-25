@@ -11,7 +11,7 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var desks = [Desk]()
+    var desks = [Date]()
     var deskCounter: Int = 1
 
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class MasterViewController: UITableViewController {
 
     @objc
     func insertNewObject(_ sender: Any) {
-        desks.insert(Desk(number: deskCounter), at: 0)
+        desks.insert(Date(), at: 0)
         deskCounter+=1
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
@@ -67,8 +67,7 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        let object = desks[indexPath.row]
-        cell.textLabel!.text = object.name
+        cell.textLabel!.text = "Cell"
         return cell
     }
 

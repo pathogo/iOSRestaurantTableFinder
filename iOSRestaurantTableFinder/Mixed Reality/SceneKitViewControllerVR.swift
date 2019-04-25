@@ -33,6 +33,7 @@ class SceneKitViewControllerVR: MixedRealityViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup of all VR settings
         setupScene()
         setupCamera()
         setupTapGestureRecognizer()
@@ -56,16 +57,14 @@ class SceneKitViewControllerVR: MixedRealityViewController {
     
     // MARK: - scene
     private func setupScene() {
-        
         mainScene = SCNScene(named: "assets.scnassets/Scenes/RestaurantStage.scn")
-        
         sceneView.allowsCameraControl = false
         sceneView.scene = mainScene
         sceneView.isPlaying = true
     }
     
     private func setupTapGestureRecognizer() {
-        let pressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleTableGesture(_:)))
+        let pressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(handleDeskGesture(_:)))
         pressGestureRecognizer.minimumPressDuration = 1.0
         pressGestureRecognizer.delegate = self
         sceneView.addGestureRecognizer(pressGestureRecognizer)
@@ -73,13 +72,12 @@ class SceneKitViewControllerVR: MixedRealityViewController {
     
     // MARK: - camera
     private func setupCamera() {
-        
         cameraStick = mainScene.rootNode.childNode(withName: "camera", recursively: false)!
-        
     }
     
     private func panCameraHorizontally(_ direction:float2) {
-        
+
+        // moves camera to left, right, up and above
         var directionToPan = direction
         let panReducer = Float(0.005)
         
@@ -162,7 +160,7 @@ class SceneKitViewControllerVR: MixedRealityViewController {
 
 extension SceneKitViewControllerVR : UIGestureRecognizerDelegate {
     
-    @objc func handleTableGesture(_ gestureReconizer: UIGestureRecognizer) {
+    @objc func handleDeskGesture(_ gestureReconizer: UIGestureRecognizer) {
         
         if gestureReconizer.state == .ended {
             let location = gestureReconizer.location(in: sceneView)
@@ -187,6 +185,7 @@ extension SceneKitViewControllerVR : UIGestureRecognizerDelegate {
     
     private func addDesk(at pos: SCNVector3) {
         
+        // füge Desk in der Szene hinzu
         let scene = SCNScene(named: "assets.scnassets/Scenes/Desk.scn")
 
         let deskNode = SCNNode()
@@ -202,6 +201,7 @@ extension SceneKitViewControllerVR : UIGestureRecognizerDelegate {
         
     private func addDeskOverlay(at pos: SCNVector3) {
         
+        // füge Overlay in der Szene hinzu
         let scaleFactor = Float(0.05)
         var boxPosition = SCNVector3(x: pos.x, y: pos.y, z: pos.z)
         boxPosition.y += 1
@@ -236,6 +236,7 @@ extension SceneKitViewControllerVR : UIGestureRecognizerDelegate {
     }
     
     fileprivate func removeDeskWithOverlays() {
+        // räume mit Tischen auf
         for childNode: SCNNode in (sceneView.scene?.rootNode.childNodes)! {
             if childNode.name == "desk"
             || childNode.name == "deskOverlay"

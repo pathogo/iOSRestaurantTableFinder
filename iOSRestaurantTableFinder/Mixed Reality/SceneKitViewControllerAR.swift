@@ -193,7 +193,6 @@ extension SceneKitViewControllerAR : UIGestureRecognizerDelegate {
         for child: SCNNode in (scene?.rootNode.childNodes)! {
             deskNode.addChildNode(child)
         }
-        
         sceneView.scene.rootNode.addChildNode(deskNode)
         
     }
@@ -240,6 +239,7 @@ extension SceneKitViewControllerAR : UIGestureRecognizerDelegate {
     }
     
     fileprivate func removeDeskWithOverlays() {
+        // räume alte Tische auf
         for childNode: SCNNode in (sceneView.scene.rootNode.childNodes) {
             if childNode.name == "desk"
                 || childNode.name == "deskOverlay"

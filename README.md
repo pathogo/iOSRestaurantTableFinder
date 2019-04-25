@@ -15,6 +15,6 @@ Das Repository enthält eine Trainingsanwendung, die eine schrittweise Einführu
 
 Die Lernanwendung enthält die folgenden Sessions:
 
-![Trainingsagenda](https://www.dropbox.com/s/71aqnrtu0mo3yts/trainingagenda.png)
+![Trainingsagenda](trainingagenda.png)
 
 Alles weitere findet sich in den Lernmaterialien im Repository.

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Desk {
+class DeskAlternative: Codable {
     
     var number: Int
     var name: String?
@@ -27,7 +27,7 @@ struct Desk {
 }
     
 /// This is an alternative implementation, using a computed property for the name.
-struct DeskAlternative {
+class Desk: Codable {
     
     var number: Int
     var name: String {

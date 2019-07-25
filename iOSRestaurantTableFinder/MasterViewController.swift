@@ -48,6 +48,7 @@ class MasterViewController: UITableViewController {
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                controller.delegate = self
             }
         }
     }
@@ -87,3 +88,9 @@ class MasterViewController: UITableViewController {
 
 }
 
+
+extension MasterViewController: DetailViewControllerDelegate {
+    func detailItemWasChanged(by: DetailViewController) {
+        self.tableView.reloadData()
+    }
+}

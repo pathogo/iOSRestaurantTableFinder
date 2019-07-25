@@ -20,6 +20,7 @@
 		998B4AB52264BB5200C9A9D0 /* SceneKitViewControllerVR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AB02264BB5200C9A9D0 /* SceneKitViewControllerVR.swift */; };
 		998B4AB62264BB5200C9A9D0 /* assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 998B4AB12264BB5200C9A9D0 /* assets.scnassets */; };
 		998B4AB82264BB5200C9A9D0 /* SceneKitViewControllerAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998B4AB42264BB5200C9A9D0 /* SceneKitViewControllerAR.swift */; };
+		B2BF945822E9885B00763E9A /* RestaurantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BF945722E9885B00763E9A /* RestaurantStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		998B4AB02264BB5200C9A9D0 /* SceneKitViewControllerVR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneKitViewControllerVR.swift; sourceTree = "<group>"; };
 		998B4AB12264BB5200C9A9D0 /* assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = assets.scnassets; sourceTree = "<group>"; };
 		998B4AB42264BB5200C9A9D0 /* SceneKitViewControllerAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneKitViewControllerAR.swift; sourceTree = "<group>"; };
+		B2BF945722E9885B00763E9A /* RestaurantStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				993B982C225CFEB8005B61C0 /* AppDelegate.swift */,
 				993B982E225CFEB8005B61C0 /* MasterViewController.swift */,
+				B2BF945722E9885B00763E9A /* RestaurantStore.swift */,
 				993B9830225CFEB8005B61C0 /* DetailViewController.swift */,
 				998B4AAD2264B75D00C9A9D0 /* Desk.swift */,
 				998B4AA92264A50B00C9A9D0 /* MixedRealityViewController.swift */,
@@ -289,6 +292,7 @@
 				998B4AAE2264B75D00C9A9D0 /* Desk.swift in Sources */,
 				993B982F225CFEB8005B61C0 /* MasterViewController.swift in Sources */,
 				998B4AAA2264A50B00C9A9D0 /* MixedRealityViewController.swift in Sources */,
+				B2BF945822E9885B00763E9A /* RestaurantStore.swift in Sources */,
 				993B982D225CFEB8005B61C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YT9GZ8D5J3;
+				DEVELOPMENT_TEAM = 4A4K4LYRKD;
 				INFOPLIST_FILE = iOSRestaurantTableFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,7 +490,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YT9GZ8D5J3;
+				DEVELOPMENT_TEAM = 4A4K4LYRKD;
 				INFOPLIST_FILE = iOSRestaurantTableFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

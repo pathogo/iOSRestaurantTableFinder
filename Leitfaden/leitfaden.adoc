@@ -1,5 +1,6 @@
 :source-highlighter: rouge
 :source-language: swift
+:imagesdir: ./
 
 = Leitfaden für Mobile Training
 
@@ -56,6 +57,8 @@ override init() {
 a. Bennene im `MasterViewController` das Attribut `objects` in `desks` um. Ändere außerdem den Typ von `[Any]` auf `[Desk]`.
 _Wir nutzen hier `desks`, da `tables` bereits verwendet wird._
 //TODO: Add Description, Image of Refactoring here.
+
+image::refactor.png[]
 
 a. Das Template verwendet `NSDate` als Modell-Typ an mehreren Stellen. Ändere _alle_ Vorkommen von `NSDate` im Template zu `Desk`. Außerdem muss an allen Stellen, an denen bisher das `description`-Attribut verwendet wird, dieses auf `name` geändert werden. Starte danach die App, und stelle sicher dass bei Tap auf "+" Tische hinzugefügt werden.
 
@@ -116,9 +119,13 @@ git checkout task2
 
 1. Öffne `Main.storyboard` und füge aus der Library einen `NavigationController` hinzu. Dieser hat als Standard als "RootViewController" einen `TableViewController`. Ersetze diesen durch einen normalen `ViewController`. Stelle die Verknüpfung zum `NavigationController` wieder her, indem du per Ctrl-drag-and-drop vom `NavigationController` auf den neuen `ViewController` ziehst. Wähle im aufgehenden Menü _RootViewController_ aus.
 
+image::storyboard.png[]
+
 - Klicke auf den neuen ViewController und ändere in der rechten Seitenleiste im 3. Tab die Klasse auf `SceneKitControllerVR`.
 
 - Wähle den View des neuen ViewControllers aus und ändere in der rechten Seitenleiste im 3. Tab die Klasse auf `SCNView`.
+
+image::storyboard-detail.png[]
 
 2. Wir wollen den neuen ViewController aufrufen und schließen können. 
 

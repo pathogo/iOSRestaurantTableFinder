@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+
+class RestaurantStore {
+    static let shared = RestaurantStore()
+    
+    private init() {
+        
+    }
+    
+    func load() {
+        if let data = UserDefaults.standard.value(forKey:"store.desks") as? Data {
+            let value = try? PropertyListDecoder().decode(Array<Desk>.self, from: data)
+            desks = value ?? []
+        }
+    }
+    
+    func store() {
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(self.desks), forKey: "store.desks")
+    }
+    
+    var desks: [Desk] = []
+}

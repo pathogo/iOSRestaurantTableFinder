@@ -4,6 +4,7 @@
 
 # Manual Additions
 Leitfaden/*.html
+Leitfaden/*.pdf
 
 ## Build generated
 build/

@@ -129,8 +129,8 @@ image::storyboard.png[]
 - Klicke auf den neuen ViewController und ändere in der rechten Seitenleiste im 3. Tab die Klasse auf `SceneKitControllerVR`.
 
 - Wähle den View des neuen ViewControllers aus und ändere in der rechten Seitenleiste im 3. Tab die Klasse auf `SCNView`.
-+
-image::storyboard-detail.png[]
+//+
+//image::storyboard-detail.png[]
 
 . Wir wollen den neuen ViewController aufrufen und schließen können. 
 

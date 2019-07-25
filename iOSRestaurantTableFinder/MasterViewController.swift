@@ -12,7 +12,6 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var desks = [Desk]()
-    var deskCounter: Int = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +33,7 @@ class MasterViewController: UITableViewController {
 
     @objc
     func insertNewObject(_ sender: Any) {
-        desks.insert(Desk(number: deskCounter), at: 0)
-        deskCounter+=1
+        desks.insert(Desk(number: desks.count + 1), at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }

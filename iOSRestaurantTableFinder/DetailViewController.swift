@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     @IBOutlet weak var virtualRealityLabel: UIBarButtonItem!
+    
+    var delegate: DetailViewControllerDelegate?
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -26,15 +28,20 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         configureView()
+        delegate?.detailItemWasChanged(by: self)
     }
 
     var detailItem: Desk? {
         didSet {
             // Update the view.
             configureView()
+            delegate?.detailItemWasChanged(by: self)
         }
     }
 
 
 }
 
+protocol DetailViewControllerDelegate {
+    func detailItemWasChanged(by: DetailViewController)
+}
